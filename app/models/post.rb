@@ -12,11 +12,11 @@ class Post < ApplicationRecord
   end
 
   def post_owner?(current_user_id)
-    self.user_id == current_user_id
+    user_id == current_user_id
   end
 
   def lapsed_time
-    Time.now - self.created_at
+    Time.now - created_at
   end
 
   def within_ten_mins?
