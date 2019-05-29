@@ -13,21 +13,23 @@
 
 <%= form_for @user do |form| %>
 
+  <%= render 'shared/error_messages' %>
+
     <div class="signup-body__message">
       <div class="hidden"><%= form.label :first_name %></div>
-      <%= form.text_field :first_name, placeholder: "first name", required: true %>
+      <%= form.text_field :first_name, placeholder: "first name", class: "form-control" %>
     </div>
     <div class="signup-body__message">
       <div class="hidden"><%= form.label :last_name %></div>
-      <%= form.text_field :last_name, placeholder: "last name", required: true %>
+      <%= form.text_field :last_name, placeholder: "last name", class: "form-control" %>
     </div>
     <div class="signup-body__message">
       <div class="hidden"><%= form.label :email %></div>
-      <%= form.email_field :email, placeholder: "email", required: true %>
+      <%= form.text_field :email, placeholder: "email", class: "form-control" %>
     </div>
     <div class="signup-body__message">
       <div class="hidden"><%= form.label :password %></div>
-      <%= form.text_field :password, placeholder: "password", type: "password", required: true, minlength: 6, maxlength: 10 %>
+      <%= form.text_field :password, placeholder: "password", type: "password", class: "form-control" %>
     </div>
     <div class="signup-body__submit">
       <%= form.submit "Submit" %>

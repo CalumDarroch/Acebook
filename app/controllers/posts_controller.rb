@@ -5,7 +5,13 @@ class PostsController < ApplicationController
   before_action :logged_in_user, only: [:edit, :update, :destroy, :new]
 
   def index
+    if logged_in?
     @posts = Post.all
+  else
+
+    redirect_to login_url
+    flash[:error] = 'Please log in / sign up'
+  end
   end
 
   def new

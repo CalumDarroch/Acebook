@@ -20,11 +20,11 @@
 
         <div class="login-body__message">
           <div class="hidden"><%= form.label :email %></div>
-          <%= form.text_field :email, placeholder: "email", required: true  %>
+          <%= form.text_field :email, placeholder: "email"  %>
         </div>
         <div class="login-body__message">
           <div class="hidden"><%= form.label :password %></div>
-          <%= form.text_field :password, placeholder: "password",type: "password", required: true  %>
+          <%= form.text_field :password, placeholder: "password",type: "password"  %>
         </div>
         <div class="login-body__submit">
           <%= form.submit "Submit" %>
