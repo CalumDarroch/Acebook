@@ -1,3 +1,5 @@
+<script language="JavaScript" type="text/javascript" src="<?php echo get_option('siteurl') ?>/new.js.erb"></script>
+
 <body class="header">
   <div class="header">
     <h1>Acebook</h1>
@@ -16,7 +18,10 @@
 
     <h3>Welcome back <%= current_user.first_name.capitalize %>!</h3>
 
-    <h4><%= link_to 'New post', new_post_path %></h4>
+<div id="new-post">
+  <h4><%= link_to 'New post', new_post_path, remote: true %></h4>
+</div>
+
 
   </header>
   <br>

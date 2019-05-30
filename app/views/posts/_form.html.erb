@@ -1,0 +1,11 @@
+<%= form_with(model: post, local: true) do |form| %>
+  <div class="post-header">
+    <%= form.label :message, "New" %>
+  </div>
+  <div class="field">
+    <%= form.text_area :message %>
+  </div>
+  <div class="actions">
+    <%= form.submit "Post" %>
+  </div>
+<% end %>
