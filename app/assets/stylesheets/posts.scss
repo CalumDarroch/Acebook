@@ -6,6 +6,26 @@ $shadow: -0.6rem 0.6rem 0 rgba(29, 30, 28, 0.26);
 
 * { font-family: 'Roboto', sans-serif; }
 
+nav {
+  height: 120px;
+  background-color: #D6FEFD;
+  display: flex;
+  position: relative;
+}
+
+.nav-left {
+  text-align: left;
+  flex-grow: 1;
+}
+
+.nav-right {
+  text-align: right;
+  flex-grow: 1;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
 .post {
     &-body {
         margin: 0;

@@ -50,9 +50,10 @@
  }
 
  h1 {
+     font-family: 'Fredoka One', cursive;
      text-align: top, left;
      margin-left: 10px;
-     font-size: 40px;
+     font-size: 50px;
      font-weight: 650;
      color: black;
  }
@@ -91,4 +92,24 @@
 
  header {
    text-align: center;
+ }
+
+ nav {
+   height: 120px;
+   background-color: #D6FEFD;
+   display: flex;
+   position: relative;
+ }
+
+ .nav-left {
+   text-align: left;
+   flex-grow: 1;
+ }
+
+ .nav-right {
+   text-align: right;
+   flex-grow: 1;
+   position: absolute;
+   right: 0;
+   bottom: 0;
  }

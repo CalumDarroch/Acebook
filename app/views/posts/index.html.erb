@@ -1,22 +1,31 @@
 <script language="JavaScript" type="text/javascript" src="<?php echo get_option('siteurl') ?>/new.js.erb"></script>
 
+<nav>
+  <div class="nav-left">
+  <h1>Acebook</h1>
+  </div>
+  <div class="nav-right">
+  <h3>Welcome back <%= current_user.first_name.capitalize %>!</h3>
+  <% if logged_in? %>
+    <h4><%= link_to 'Log out', logout_path,
+    method: :delete,
+    data: { confirm: 'Are you sure?' } %></h4>
+  <% else %>
+    <h4><%= link_to 'Sign up', new_user_path %></h4>
+  <% end %>
+  </div>
+</nav>
+
 <body class="header">
   <div class="header">
-    <h1>Acebook</h1>
-    <% if logged_in? %>
-      <h4><%= link_to 'Log out', logout_path,
-      method: :delete,
-      data: { confirm: 'Are you sure?' } %></h4>
-    <% else %>
-      <h4><%= link_to 'Sign up', new_user_path %></h4>
-    <% end %>
+
   </div>
 </body>
 
 <body class="posts-body">
   <header>
 
-    <h3>Welcome back <%= current_user.first_name.capitalize %>!</h3>
+
 
 <div id="new-post">
   <h4><%= link_to 'New post', new_post_path, remote: true %></h4>
