@@ -31,7 +31,7 @@
           </div>
           <div class="posts-header-right">
               <h5><%= post.created_at.strftime("%d-%m-%Y")%>
-              at <%= post.created_at.strftime("%I:%M %p")%></h5>
+              at <%= post.created_at.strftime("%-l:%M %p")%></h5>
           </div>
         </div>
         <p><%= h(post.message).gsub(/\n/, '<br/>').html_safe %></p>
