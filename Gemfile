@@ -31,6 +31,7 @@ gem 'rubocop'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 # use 'bycrypt' to encrypt passwords and allow authentication
+gem 'jquery-rails'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
