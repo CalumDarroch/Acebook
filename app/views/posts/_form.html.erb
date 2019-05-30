@@ -1,9 +1,9 @@
 <%= form_with(model: post, local: true) do |form| %>
-  <div class="post-header">
+  <div class="label">
     <%= form.label :message, "New" %>
   </div>
   <div class="field">
-    <%= form.text_area :message %>
+    <%= form.text_area :message %> 
   </div>
   <div class="actions">
     <%= form.submit "Post" %>
