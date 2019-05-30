@@ -7,14 +7,14 @@ include SessionsHelper
   end
 
   def create
-
     @user = User.create(user_params)
     if @user.save
+
       log_in @user
     redirect_to posts_url
   else
     render 'new'
-  end
+    end
   end
 
   private
