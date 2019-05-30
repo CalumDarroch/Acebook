@@ -1,5 +1,7 @@
 class UsersController < ApplicationController
 
+include SessionsHelper
+
   def new
     @user = User.new
   end
@@ -8,7 +10,8 @@ class UsersController < ApplicationController
 
     @user = User.create(user_params)
     if @user.save
-    redirect_to '/login'
+      log_in @user
+    redirect_to posts_url
   else
     render 'new'
   end

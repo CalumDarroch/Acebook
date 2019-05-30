@@ -5,7 +5,4 @@ def sign_up_and_login
   fill_in "Email", with: "john@doe.com"
   fill_in "Password", with: "john1234"
   click_button 'Submit'
-  fill_in "Email", with: "john@doe.com"
-  fill_in "Password", with: "john1234"
-  click_button 'Submit'
 end
