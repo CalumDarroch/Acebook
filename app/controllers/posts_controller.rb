@@ -6,12 +6,11 @@ class PostsController < ApplicationController
 
   def index
     if logged_in?
-    @posts = Post.all
-  else
-
-    redirect_to login_url
-    flash[:error] = 'Please log in / sign up'
-  end
+      @posts = Post.all
+    else
+      redirect_to login_url
+      flash[:error] = 'Please log in / sign up'
+    end
   end
 
   def new
@@ -21,10 +20,6 @@ class PostsController < ApplicationController
   def edit
     @post = Post.find(params[:id])
   end
-
-  # def show
-  #   @post = Post.find(params[:id])
-  # end
 
   def create
     user = User.find(session[:user_id])
