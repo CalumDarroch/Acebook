@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.feature "Timeline", type: :feature do
   scenario "Can update posts and view them" do
     sign_up_and_login
-    click_link "New post"
+    click_link "Click to create new post"
     fill_in "New", with: "Hello, world!"
     click_button "Post"
     click_link "Edit"

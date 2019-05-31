@@ -129,6 +129,9 @@ nav {
     }
     &-content {
       text-align: center;
+      font-size: 13px;
+      font-weight: 500;
+      padding: 10px
     }
     &-likes {
       margin-left: 10px;
@@ -168,16 +171,17 @@ nav {
 
     }
       &-header {
+          display: flex;
+          flex-direction: row;
           text-align: right;
           padding: 8px;
           font-size: 14px;
           font-weight: 700;
           border-bottom: 1px solid black;
-
-          &__time {
-              margin-top: 10px;
-
-          }
+      }
+      &-header-right {
+        margin-left: 290px;
+        text-align: right;
       }
       &-body {
           padding: 20px;
@@ -190,6 +194,18 @@ nav {
 }
 
 #new-post {
-  color: black;
+
   text-align: center;
+}
+
+#new-post a {
+  border: 1px solid black;
+  height: 50px;
+  width: 100px;
+  padding: 10px;
+  background-color: #fff;
+  box-shadow: $shadow;
+  color: purple;
+  text-align: center;
+  text-decoration: none;
 }
