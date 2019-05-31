@@ -126,6 +126,8 @@ nav {
     &-footer {
       display: flex;
       flex-direction: row;
+      padding-left: 10px;
+      padding-right: 10px;
     }
     &-content {
       text-align: center;
@@ -134,9 +136,9 @@ nav {
       padding: 10px
     }
     &-likes {
-      margin-left: 10px;
       display: flex;
-      flex-direction: row;
+      text-align: left;
+      flex-grow: 1;
     }
     &-likes-count {
       margin-left: 3px;
@@ -146,13 +148,17 @@ nav {
       color: black;
     }
     &-likes-button {
-
+      padding-bottom: 10px;
     }
     &-edit-delete {
-      margin-left: 330px;
       padding-bottom: 1px;
-      padding-top: -3px;
+      padding-top: 8px;
       text-align: right;
+      flex-grow: 1;
+      font-size: 11px;
+      font-weight: 650;
+      color: purple;
+
     }
     &-body {
         margin: 0;
@@ -175,20 +181,27 @@ nav {
           flex-direction: row;
           text-align: right;
           padding: 8px;
-          font-size: 14px;
-          font-weight: 700;
           border-bottom: 1px solid black;
       }
       &-header-right {
-        margin-left: 290px;
+        padding-top: 3px;
+        font-size: 11px;
+        font-weight: 700;
+        color: purple;
+        flex-grow: 1;
         text-align: right;
+      }
+      &-header-left {
+        font-size: 16px;
+        font-weight: 700;
+        color: purple;
+        flex-grow: 1;
+        text-align: left;
       }
       &-body {
           padding: 20px;
           display: flex;
           flex-direction: column;
-
-
       }
 
 }

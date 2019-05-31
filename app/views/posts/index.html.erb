@@ -41,11 +41,11 @@
       <div class="posts-card">
         <div class="posts-header">
           <div class="posts-header-left">
-              <h5><%= post.username %></h5>
+              <%= post.username %>
           </div>
           <div class="posts-header-right">
-              <h5><%= post.created_at.strftime("%d-%m-%Y")%>
-              at <%= post.created_at.strftime("%-l:%M %p")%></h5>
+              <%= post.created_at.strftime("%d-%m-%Y")%>
+              at <%= post.created_at.strftime("%-l:%M %p")%>
           </div>
         </div>
 
@@ -80,14 +80,14 @@
 
 
           <% if post.post_owner?(current_user.id) && post.within_ten_mins? %>
-              <h5><%= link_to 'Edit', edit_post_path(post) %>
+              <%= link_to 'Edit', edit_post_path(post) %>
               <%= link_to 'Delete', post_path(post),
               method: :delete,
-              data: { confirm: 'Are you sure?' } %></h5>
+              data: { confirm: 'Are you sure?' } %>
             <% elsif post.post_owner?(current_user.id)%>
-              <h5><%= link_to 'Delete', post_path(post),
+              <%= link_to 'Delete', post_path(post),
               method: :delete,
-              data: { confirm: 'Are you sure?' } %></h5>
+              data: { confirm: 'Are you sure?' } %>
             <% else %>
             <% end %>
 </div>
