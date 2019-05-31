@@ -110,4 +110,4 @@ Over the two weeks the team has been able to produce a presentable version of th
 4. Add a new post / Edit a post / Delete a post / Like a post.
 
 ### Acknowledgements
-Makers Academy | Callum Marshall | Calum Darroch | Jake Napper | Dominic White
+Makers Academy | Callum Marshall | Calum Darroch | Jake Napper | Dominic White | Mat Shup
