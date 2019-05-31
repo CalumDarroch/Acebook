@@ -40,10 +40,13 @@ nav {
     &-card {
         border: 1px solid black;
         height: 160px;
-        width: 160px;
+        width: 170px;
         background-color: #fff;
         margin: 0 auto;
         box-shadow: $shadow;
+    }
+    &-card textarea {
+
     }
 
     &-header {
