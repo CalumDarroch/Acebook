@@ -54,7 +54,6 @@
      color: black;
  }
 
-
  h3 {
      text-align: top, right;
      margin: 10px;
@@ -108,4 +107,17 @@
    position: absolute;
    right: 0;
    bottom: 0;
+ }
+
+ .alert-danger {
+   padding: 3px;
+   font-size: 12px;
+   font-weight: 600;
+   color: red;
+ }
+
+ #error_explanation {
+   font-size: 10px;
+   font-weight: 500;
+   color: red;
  }
