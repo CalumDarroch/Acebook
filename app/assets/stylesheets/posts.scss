@@ -43,11 +43,7 @@ nav {
         margin: 0 auto;
         box-shadow: $shadow;
         margin: 0;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        -ms-transform: translate(-50%, -50%);
-        transform: translate(-50%, -50%);
+        position: relative;
     }
     &-header {
         text-align: center;
@@ -127,6 +123,23 @@ nav {
     }
 
   .posts {
+    &-content {
+      text-align: center;
+    }
+    &-likes {
+      margin-left: 10px;
+      display: flex;
+      flex-direction: row;
+    }
+    &-likes-count {
+      margin-left: 3px;
+      padding-top: 7px;
+      font-size: 12px;
+      font-weight: 650;
+      color: black;
+    }
+    &-likes-button {
+    }
     &-body {
         margin: 0;
         padding: 0;
@@ -163,4 +176,9 @@ nav {
 
       }
 
+}
+
+#new-post {
+  color: black;
+  text-align: center;
 }

@@ -26,7 +26,6 @@
   <header>
 
 
-
 <div id="new-post">
   <h4><%= link_to 'New post', new_post_path, remote: true %></h4>
 </div>
@@ -48,13 +47,31 @@
               at <%= post.created_at.strftime("%-l:%M %p")%></h5>
           </div>
         </div>
+
+        <div class="posts-content">
+
         <p><%= h(post.message).gsub(/\n/, '<br/>').html_safe %></p>
-        <% pre_like = post.likes.find { |like| like.user_id == current_user.id } %>
-        <% if pre_like %>
-         <%= button_to 'Unlike', post_like_path(post, pre_like), method: :delete %>
-        <% else %>
-         <%= button_to 'Like', post_likes_path(post), method: :post %>
-        <% end %>        <p><%= post.likes.count %> <%= (post.likes.count) == 1 ? 'Like' : 'Likes'%></p>
+
+        </div>
+
+        <div class="posts-likes">
+
+          <div class="posts-likes-button">
+
+            <% pre_like = post.likes.find { |like| like.user_id == current_user.id } %>
+            <% if pre_like %>
+             <%= button_to 'Unlike', post_like_path(post, pre_like), method: :delete %>
+            <% else %>
+             <%= button_to 'Like', post_likes_path(post), method: :post %>
+            <% end %>
+
+          </div>
+
+          <div class="posts-likes-count">
+            <%= post.likes.count %> <%= (post.likes.count) == 1 ? 'Like' : 'Likes'%>
+          </div>
+
+        </div>
 
           <% if post.post_owner?(current_user.id) && post.within_ten_mins? %>
               <h5><%= link_to 'Edit', edit_post_path(post) %>

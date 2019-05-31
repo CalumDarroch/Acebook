@@ -1,11 +1,20 @@
-<%= form_with(model: post, local: true) do |form| %>
-  <div class="label">
-    <%= form.label :message, "New" %>
+
+<body class="post-body">
+
+  <div class="post-card">
+
+    <%= form_with(model: post, local: true) do |form| %>
+      <div class="post-header">
+        <%= form.label :message, "New" %>
+      </div>
+      <div class="post-body__message">
+        <%= form.text_area :message %>
+      </div>
+      <div class="post-body__submit">
+        <%= form.submit "Post" %>
+      </div>
+    <% end %>
+
   </div>
-  <div class="field">
-    <%= form.text_area :message %> 
-  </div>
-  <div class="actions">
-    <%= form.submit "Post" %>
-  </div>
-<% end %>
+
+</body>
