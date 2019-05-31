@@ -96,5 +96,18 @@ The project used the following technologies/software:
 * HTML
 * JQuery
 
+### Improvements / Status
+Over the two weeks the team has been able to produce a presentable version of the social media platform, hosted on a remote server with a good standard of CSS styling which has met the requirements the client requested. With more time spent on the project we would have liked to add additional features such as user profiles and walls, however each of us are more than happy with the progress we have made. Further improvements would have also included more robust testing on a unit and feature level. This would have required time spent researching and having a greater understanding of testing in a rails application, and the outcome of this would have been a smoother ride building the app.
+
+### Using Acebook
+1. Follow this link to the deployed version of Acebook:
+[FiveGuys Acebook](https://secret-forest-11009.herokuapp.com/)
+
+2. Complete the Sign Up form.
+
+3. You will be redirected to the Posts page.
+
+4. Add a new post / Edit a post / Delete a post / Like a post.
+
 ### Acknowledgements
 Makers Academy | Callum Marshall | Calum Darroch | Jake Napper | Dominic White
