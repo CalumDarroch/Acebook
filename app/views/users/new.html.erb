@@ -1,41 +1,44 @@
-<body class="header">
-  <div class="header">
-    <h1>Acebook</h1>
-    <%= link_to login_path do %>
-      <h4>Log in</h4>
-    <% end %>
+<nav>
+  <div class="nav-left">
+  <h1>Welcome to Acebook</h1>
   </div>
-</body>
+  <div class="nav-right">
 
-<body class="signup-body">
-  <div class="signup-card">
-    <div class="signup-header">Sign up</div>
+    <h4><%= link_to 'Log in', login_path %></h4>
+</nav>
 
-<%= form_for @user do |form| %>
 
-  <%= render 'shared/error_messages' %>
+<body class="structural-integrity-div">
+  <body class="signup-body">
+    <div class="signup-card">
+      <div class="signup-header">Sign up</div>
 
-    <div class="signup-body__message">
-      <div class="hidden"><%= form.label :first_name %></div>
-      <%= form.text_field :first_name, placeholder: "first name", class: "form-control" %>
+  <%= form_for @user do |form| %>
+
+    <%= render 'shared/error_messages' %>
+
+      <div class="signup-body__message">
+        <div class="hidden"><%= form.label :first_name %></div>
+        <%= form.text_field :first_name, placeholder: "first name", class: "form-control" %>
+      </div>
+      <div class="signup-body__message">
+        <div class="hidden"><%= form.label :last_name %></div>
+        <%= form.text_field :last_name, placeholder: "last name", class: "form-control" %>
+      </div>
+      <div class="signup-body__message">
+        <div class="hidden"><%= form.label :email %></div>
+        <%= form.text_field :email, placeholder: "email", class: "form-control" %>
+      </div>
+      <div class="signup-body__message">
+        <div class="hidden"><%= form.label :password %></div>
+        <%= form.text_field :password, placeholder: "password", type: "password", class: "form-control" %>
+      </div>
+      <div class="signup-body__submit">
+        <%= form.submit "Submit" %>
+      </div>
+
+  <% end %>
+
     </div>
-    <div class="signup-body__message">
-      <div class="hidden"><%= form.label :last_name %></div>
-      <%= form.text_field :last_name, placeholder: "last name", class: "form-control" %>
-    </div>
-    <div class="signup-body__message">
-      <div class="hidden"><%= form.label :email %></div>
-      <%= form.text_field :email, placeholder: "email", class: "form-control" %>
-    </div>
-    <div class="signup-body__message">
-      <div class="hidden"><%= form.label :password %></div>
-      <%= form.text_field :password, placeholder: "password", type: "password", class: "form-control" %>
-    </div>
-    <div class="signup-body__submit">
-      <%= form.submit "Submit" %>
-    </div>
-
-<% end %>
-
-  </div>
+  </body>
 </body>
